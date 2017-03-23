@@ -1,0 +1,66 @@
+.border-box {
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+}
+* { .border-box(); }
+
+.display-flex {
+    display: -webkit-flex;
+    display: -ms-flexbox; // IE10 uses -ms-flexbox
+    display: -ms-flex; // IE11
+    display: flex;
+}
+.flex-center {
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+.flex-grow(@num: 1) {
+    -webkit-flex-grow:@num;
+    flex-grow:@num;
+}
+.flex-wrap {
+    -ms-flex-wrap:wrap;
+    -webkit-flex-wrap:wrap;
+    flex-wrap:wrap;
+}
+.columnize {
+    -webkit-flex-direction:column;
+    -moz-flex-direction:column;
+    flex-direction:column;
+}
+.rcolumnize {
+    -webkit-flex-direction:column-reverse;
+    -moz-flex-direction:column-reverse;
+    flex-direction:column-reverse;
+}
+.translate (@x, @y:0) {
+    -webkit-transform:       translate(@x, @y);
+    -moz-transform: 	 translate(@x, @y);
+    -ms-transform: 		 translate(@x, @y);
+    -o-transform: 		 translate(@x, @y);
+    transform: 		 translate(@x, @y);
+}
+.transition(@sec) {
+    -webkit-transition: all @sec ease;
+    -moz-transition: all @sec ease;
+    -ms-transition: all @sec ease;
+    -o-transition: all @sec ease;
+    transition: all @sec ease;
+}
+.linear-gradient(@main, @top) {
+    background: @main; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(@top, @main); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(@top, @main); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(@top, @main); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(@top, @main); /* Standard syntax */
+}
+.horiz-linear-gradient(@l, @cl, @cr, @r)  {
+    background: @l; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left, @l, @cl, @cr, @r); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(left, @l, @cl, @cr, @r); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(left, @l, @cl, @cr, @r); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, @l, @cl, @cr, @r); /* Standard syntax */
+}
