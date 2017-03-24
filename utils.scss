@@ -1,0 +1,18 @@
+@mixin border-box {
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+@mixin display-flex {
+    display: -webkit-flex;
+    display: -ms-flexbox; // IE10 uses -ms-flexbox
+    display: -ms-flex; // IE11
+    display: flex;
+}
+@mixin flex-center {
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
